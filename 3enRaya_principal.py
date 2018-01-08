@@ -133,8 +133,6 @@ def getComputerMove(board, computerLetter, n):
     else:
         playerLetter = 'X'
 
-    # Here is our algorithm for our Tic Tac Toe AI:
-    # First, check if we can win in the next move
 
     copyNN = getBoardCopyForNN(board,computerLetter)
     copy = getBoardCopy(board)
