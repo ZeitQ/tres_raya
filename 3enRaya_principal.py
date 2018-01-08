@@ -106,7 +106,7 @@ def isSpaceFree(board, move):
     return board[move] == ' '
 
 def getPlayerMove(board):
-    # Let the player type in his move.
+
     move = ' '
     while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
         print('¿Cuàl es tu proximo movimiento? (1-9)')
@@ -159,14 +159,12 @@ first = True
 
 while True:
     if(first):
-        tam_in = 9#int(input("Ingrese la cantidad de entradas de cada par: "))
-        #print tam_in
-        tam_out = 9#int(input("Ingrese la cantidad de salidas de cada par: "))
-        #print tam_out
+        tam_in = 9
+        tam_out = 9
         n, pat = bp.BP(tam_in, tam_out)
         bp.BPTrain(n, pat)
     
-    # Reset the board
+
     theBoard = [' '] * 10
     playerLetter, computerLetter = inputPlayerLetter()
     turn = whoGoesFirst()
